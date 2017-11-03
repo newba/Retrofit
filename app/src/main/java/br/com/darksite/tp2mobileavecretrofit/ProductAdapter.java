@@ -17,9 +17,10 @@ public class ProductAdapter extends ArrayAdapter<Product>{
 
     private final Context context;
     private final List<Product> elements;
+    TextView productName, productDescription, productInventory, productPrice, productCode;
 
     public ProductAdapter(Context context, List<Product> eproducts) {
-        super(context, R.layout.line, eproducts);
+        super(context, R.layout.linha, eproducts);
         this.context = context;
         this.elements = eproducts;
     }
@@ -30,16 +31,20 @@ public class ProductAdapter extends ArrayAdapter<Product>{
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View rowView = inflater.inflate(R.layout.line, parent, false);
+        View rowView = inflater.inflate(R.layout.linha, parent, false);
 
-        TextView productName = (TextView) rowView.findViewById(R.id.txtNome);
-        //TextView productDescription = (TextView)rowView.findViewById(R.id.tx)
-        TextView ano = (TextView) rowView.findViewById(R.id.txtAno);
-        TextView autor = (TextView) rowView.findViewById(R.id.txtAutor);
+        productName = (TextView) rowView.findViewById(R.id.txtNome);
+        productDescription = (TextView)rowView.findViewById(R.id.txtDescription);
+        productInventory = (TextView) rowView.findViewById(R.id.txtInventory);
+        productPrice = (TextView) rowView.findViewById(R.id.txtPrice);
+        productCode = (TextView) rowView.findViewById(R.id.txtCode);
 
-        titulo.setText(elementos.get(position).getNome());
-        autor.setText(elementos.get(position).getAutor());
-        ano.setText(Integer.toString(elementos.get(position).getAno()));
+
+        productName.setText(elements.get(position).getName());
+        productDescription.setText(elements.get(position).getDescription());
+        productInventory.setText(Integer.toString(elements.get(position).getInventoryActual()));
+        productPrice.setText(Integer.toString(elements.get(position).getPrice()));
+        productCode.setText(elements.get(position).getCode());
 
         return rowView;
     }
