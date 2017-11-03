@@ -21,8 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductsList" />
-        <activity android:name=".ClientList" />
-        <activity android:name=".SupplierList"></activity>
+        <activity android:name=".Client.ClientList" />
+        <activity android:name=".Supplier.SupplierList"></activity>
     </application>
 
 </manifest>

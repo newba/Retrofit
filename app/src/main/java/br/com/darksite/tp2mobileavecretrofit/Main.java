@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import br.com.darksite.tp2mobileavecretrofit.Client.ClientList;
+import br.com.darksite.tp2mobileavecretrofit.Supplier.SupplierList;
+
 public class Main extends AppCompatActivity {
 
     Button btnProduits, btnFournisseurs, btnClients;

@@ -18,6 +18,18 @@ import retrofit2.http.Path;
 
 public interface IProducts {
 
+    @POST("/products/add")
+    Call<Void> insertProduct(@Body Product product);
+
+    @GET("/products")
+    Call<List<Product>> getProducts();
+
+    @PUT("/products/update/{id}")
+    Call<Void> updateProduct(@Path("id") String id, @Body Product product);
+
+    @DELETE("products/remove/{id}")
+    Call<Void> removeProduct(@Path("id") String id);
+
 
     public static final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://10.0.2.2:3033/")

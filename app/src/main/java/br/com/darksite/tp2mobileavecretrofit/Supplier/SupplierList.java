@@ -1,7 +1,9 @@
-package br.com.darksite.tp2mobileavecretrofit;
+package br.com.darksite.tp2mobileavecretrofit.Supplier;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import br.com.darksite.tp2mobileavecretrofit.R;
 
 public class SupplierList extends AppCompatActivity {
 
