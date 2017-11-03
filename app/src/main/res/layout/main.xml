@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.darksite.tp2mobileavecretrofit.Main">
+
+    <Button
+        android:id="@+id/btnProduits"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Produits"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnFournisseurs"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnProduits"
+        android:layout_below="@+id/btnProduits"
+        android:layout_marginTop="58dp"
+        android:text="Fournisseurs"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnClients"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnFournisseurs"
+        android:layout_below="@+id/btnFournisseurs"
+        android:layout_marginTop="64dp"
+        android:text="Clients"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
